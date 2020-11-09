@@ -1,0 +1,35 @@
+Part 1: Implementarea arborelui de intervale
+
+O sarcina foarte simpla, am transpus pseudocodul in limbajul C.
+La alocare, am facut verificari in cazul erorilor.
+Deoarece enuntul nu cerea acest lucru, aplicatia nu trece
+testul Valgrind, aceasta avand memory leak-uri.
+
+Part 2: Intersectii
+
+Am citit din fisier lista de intervale cu ajutorul fscanf.
+Pentru solutia triviala, am folosit vectori caracteristici
+pentru a diferentia segmentele verticale de cele orizontale.
+
+Pentru solutia cu arbori, am urmat pasii din enunt.
+La sortare am folosit metoda Bubble Sort, simplu de implementat,
+dar cu o eficienta mai redusa.
+Am mutat o axa verticala imaginara, al carui indice x l-am incrementat
+pana cand intalnea un segment nou.
+
+Part 3: Bonus - Pozitii
+
+Pentru solutia triviala, am initializat vectorul cu -1, ce indica o pozitie libera.
+Apoi am scazut indexul unde trebuia introdus elementul pana gaseam o pozitie libera.
+
+Pentru solutia cu arbori de intervale, am creat arborele [0, E_MAX].
+In noduri am setat informatia la capatul drept al intervalului.
+Iterand prin lista, am interogat intervalul [0, element]. Valoarea interogarii
+este maximul informatiei din nod (ce reprezinta indexul liber maxim).
+Ulterior, am actualizat intervalul [index,index].
+Noua valoare din nod a devenit maximul dintre copii (indexul liber maxim din interval) sau
+-1, ceea ce inseamna ca toti indecsii din interval sunt ocupati.
+
+
+Overall - o tema simpla, care nu necesita mult timp pentru rezolvare.
+Enunt foarte bine explicat.

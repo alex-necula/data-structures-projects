@@ -1,0 +1,38 @@
+README
+
+Pentru rezolvarea cerintelor acestei teme, am folosit un graf reprezentat prin liste de adiacenta.
+
+Initial, citesc datele din fisier, pe care le incorporez in structura inputData.
+Aloc fiecarui actor un index al nodului si conectez nodurile grafului conform cerintei.
+In structura TGraphL am adaugat si numele actorilor (corespunzatoare fiecarui index).
+
+Task 1:
+Pentru rezolvarea acestui task, am parcurs graful folosing DFS recursiv.
+Practic, am determinat componentele conexe ale grafului.
+In vectorul productionIndex am retinut numarul productiei din care face parte fiecare actor.
+Am determinat productia in care apar cei mai multi actori si 
+am sortat numele actorilor folosing qsort.
+
+Task 2:
+Am citit mai intai datele suplimentare pentru aceasta cerinta si am determinat
+indecsii nodurilor celor 2 actori.
+Practic, trebuie sa determin distanta dintre cele 2 noduri.
+Am folosit algoritmul lui Dijkstra cu ajutorul unei structuri minHeap (cu operatiile specifice).
+
+Task 3:
+Am implementat pseudocodul din enunt pentru aceast task.
+Puntile le-am retinut in structura TBridgeArray, care contine vectorul de structuri TBridge
+(cu indecsii celor 2 noduri) si numarul puntilor.
+Ulterior, am retinut in structura TPair numele corespunzatoare fiecarei punti.
+
+Initial, am sortat crescator cele 2 nume din punte.
+Folosing qsort de 2 ori, am ajuns la sortarea finala.
+Functia cmp1 sorteaza in functie de numele primului actor.
+Functia cmp2 sorteaza in functie de numele celui de-al doilea actor,
+doar daca primul este identic.
+
+Feedback: enunt foarte bine scris, checker bun, tema interesanta, relativ dificila
+
+
+
+
